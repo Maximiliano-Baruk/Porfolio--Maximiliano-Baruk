@@ -1,0 +1,12 @@
+
+<a 
+  href={Astro.props.href}
+  target={Astro.props.href === "#/" ? "_self" : "_blank"}
+  rel="noopener noreferrer"
+  class="min-w-28 border border-bordeBtn rounded-full bg-fondoBtn text-titulos flex justify-center items-center text-center
+    gap-x-2 py-2 px-4 mx-4 transition hover:scale-105 hover:bg-gray-800 "
+    style={Astro.props.style}
+  onclick={Astro.props.onClick}
+>
+  <slot/>
+</a>

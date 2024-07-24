@@ -1,0 +1,144 @@
+---
+function copyToClipboard(arg0: string) {
+	throw new Error('Function not implemented.');
+}
+
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import SocialMedia from '../components/SocialMedia.astro';
+import Habilidades from '../components/Habilidades.astro';
+import Formacion from '../components/Formacion.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Proyectos from '../components/Proyectos.astro';
+import Hero from '../components/Hero.astro';
+import Footer from "../components/Footer.astro"
+
+import GitHubIcon from '../components/Icons/GithubIcon.astro';
+import LinkedinIcon from '../components/Icons/LinkedinIcon.astro';
+import MailIcon from '../components/Icons/MailIcon.astro';
+import HtmlIcon from '../components/Icons/HtmlIcon.astro';
+import CssIcon from '../components/Icons/CssIcon.astro';
+import AstroIcon from '../components/Icons/AstroIcon.astro';
+import GitIcon from '../components/Icons/GithubIcon.astro';
+import TailwindIcon from '../components/Icons/TailwindIcon.astro';
+import JavaScriptIcon from '../components/Icons/JavaScriptIcon.astro';
+import PerfilCheckIcon from '../components/Icons/PerfilCheckIcon.astro';
+import FormacionIcon from '../components/Icons/FormacionIcon.astro';
+import CodeIcon from '../components/Icons/CodeIcon.astro';
+import LiderIcon from '../components/Icons/LiderIcon.astro';
+import HabilidadesIcon from '../components/Icons/HabilidadesIcon.astro';
+import InglesIcon from '../components/Icons/InglesIcon.astro';
+import EquipoIcon from '../components/Icons/EquipoIcon.astro';
+import ProblemasIcon from '../components/Icons/ProblemasIcon.astro';
+
+---
+
+<Layout 
+title="Porfolio de Maximiliano - Desarrolador, Programador Web y Ing.Mecatrónica"
+description="Contrata a Maximiliano para crear una aplicacion web o automatizar procesos industriales. 	Desarrollador Web y Ing.Mecatrónico"
+>
+	<main class="  my-0 mx-auto  px-3  "   >
+		<section id="Inicio" class="py-16 max-w-4xl  my-0 mx-auto sm:w-auto  md:py-36" >
+			<Hero/>
+		</section>
+
+		<section id="Habilidades" class="mb-20  my-0 mx-auto">
+			<h2 class="text-4xl text-titulos  mb-6  flex justify-center items-center  " >
+				<HabilidadesIcon class=" size-14 pr-4 "/>
+				Habilidades Tecnicas</h2>
+			<nav class="flex justify-center items-center flex-wrap gap-10 mt-10">
+
+				<SocialMedia >
+				    <HtmlIcon />
+					Html
+				</SocialMedia>
+				
+				<SocialMedia  >
+					<CssIcon  />
+					CSS
+				</SocialMedia>
+				
+				<SocialMedia  >
+					<TailwindIcon class="size-6" />
+					Tailwind
+				</SocialMedia>
+
+				<SocialMedia  >
+					<JavaScriptIcon />
+					JavaScript
+				</SocialMedia>
+
+				<SocialMedia  >
+					<AstroIcon class="size-6" />
+					Astro
+				</SocialMedia>
+
+				<SocialMedia >
+					<GitIcon />
+					Git
+				</SocialMedia>
+
+			</nav>
+			<h2 class="text-4xl text-titulos  my-10  flex justify-center items-center  " >
+				<HabilidadesIcon class=" size-14 pr-4 "/>
+				Habilidades Blandas</h2>
+				
+			<nav class="" style="   
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 10px;">
+			<Habilidades  >
+				<InglesIcon class="size-6" />
+				Ingles B2
+			</Habilidades>
+			<Habilidades  >
+				<EquipoIcon class="size-6" />
+				Trabajo en equipo
+			</Habilidades>
+			<Habilidades  >
+				<LiderIcon class="size-6" />
+				Liderazgo
+			</Habilidades>
+			<Habilidades  >
+				<ProblemasIcon class="size-10" />
+				Resolución de problemas
+			</Habilidades>
+			</nav>
+		</section>
+
+		<section id="proyectos" class="mb-20   my-0 mx-auto ">
+			<h2 class="text-4xl text-titulos mb-8 flex justify-center items-center   " >
+				<CodeIcon class="size-12 pr-4" />
+				Proyectos</h2>
+			<Proyectos/>
+		</section>
+
+		<section id="Formacion" class="mb-20 ">
+			<h2 class="text-4xl text-titulos mb-8  flex justify-center items-center  " >
+				<FormacionIcon class="size-12 pr-4"/>
+				Formacion Academica</h2>
+		
+			<div class="flex justify-center items-start gap-x-14">
+			<Formacion class=""/>
+			
+			</div>
+		</section>
+
+		<section id="sobre-mi" class="">
+			<h2
+			  class="text-4xl text-titulos mb-8 gap-8  flex justify-center items-center"
+			>
+			  <PerfilCheckIcon class="size-8" />
+			  Sobre mí
+			</h2>
+			<AboutMe />
+		  </section>
+
+	
+	
+  
+
+		
+	</main>
+</Layout>
+

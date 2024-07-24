@@ -1,0 +1,58 @@
+---
+import Badge from '../components/Badge.astro';
+import SocialMedia from '../components/SocialMedia.astro';
+
+
+import GitHubIcon from '../components/Icons/GithubIcon.astro';
+import LinkedinIcon from '../components/Icons/LinkedinIcon.astro';
+import MailIcon from '../components/Icons/MailIcon.astro';
+---
+
+
+<div class="w-full flex flex-col md:flex-row-reverse ">
+    <div class=" pb-5">
+        <img
+        class="rounded-full object-contain size-48 border border-puntos mt-5 md:order-2" 
+        src="/public/imagenHero.webp" 
+        alt="Maximiliano Baruk"
+        >
+    </div>
+    <div class="" >
+        <h1 class="text-5xl font-bold  mb-4 text-titulos">
+            MAXIMILIANO BARUK 	
+        </h1>
+        <a 
+        href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" 
+        target="_blank"
+        rel="noopener"
+        ><Badge > Disponible para Trabajar</Badge>
+        </a>
+        <h2 class="mt-5 text-2xl md:text-lg text-gray-500 ">Soy un estudiante de <span class="text-azul">Ing.Mecatrónica y Desarrollador Front-End </span> <br/>Apasionado por el <span class="text-amarillo">diseño web, la programacion y la automatizacion</span>
+        </h2>
+        <nav class="flex  gap-x-10 mt-10">
+
+            <SocialMedia href ="https://github.com/Maximiliano-Baruk"
+            aria-label="github" >
+                <GitHubIcon />
+                GitHub
+            </SocialMedia>
+            
+            <SocialMedia href ="https://www.linkedin.com/in/maximiliano-rosas/"
+            aria-label="linkedin"  >
+                <LinkedinIcon />
+                Linkedin
+            </SocialMedia>
+            
+            <SocialMedia  
+            aria-label="contacto" 
+            style="flex-basis:auto"
+            >
+            <MailIcon />
+            maxibaruk55121@gmail.com
+            </SocialMedia>
+
+        </nav>
+    </div>
+
+  
+</div>

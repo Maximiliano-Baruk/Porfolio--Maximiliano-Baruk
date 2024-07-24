@@ -1,0 +1,48 @@
+---
+import FormacionItems from "./FormacionItems.astro"
+
+const formacion = [
+    {
+        date:'2024 -Actualidad',
+        tittle: 'Ingeniería en Mecatrónica',
+        description: 'Tecnologico Nacional de Morelia',
+       
+    },
+    {
+        date:'2024',
+        tittle: 'Curso de Astro, Generador de Sitios Web Estáticos',
+        description: 'Fazt',
+       
+    },
+    {
+        date:'2023',
+        tittle: 'Universidad JavaScript - De Cero a Experto JavaScript!',
+        description: 'Udemy',
+       
+    },
+    {
+        date:'2023',
+        tittle: 'Introduccion al Desarrollo Web Responsive con HTML y CSS',
+        description: 'Domestika',
+       
+    },
+    {
+        date:'2019',
+        tittle: 'Bachiller Técnico -Mecatrónica',
+        description: 'Cbtis 149 ',
+       
+    },
+  
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700">         
+    {
+        formacion.map(formacion => (
+        <li class="mb-10 ms-4">
+            <FormacionItems {...formacion} />
+        </li> 
+        ))
+    }         
+    
+</ol>
+

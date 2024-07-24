@@ -1,0 +1,76 @@
+---
+
+
+const navItems = [
+  {
+    title: "Inicio",
+    label: "Inicio",
+    url: "/#Inicio",
+  },
+  {
+    title: "Habilidades",
+    label: "Habilidades",
+    url: "/#Habilidades",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Formación",
+    label: "Formación",
+    url: "/#Formacion",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "mailto:maxibaruk55121@gmail.com",
+    target:"_blank",
+    color:true,
+  },
+]
+---
+
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2 "
+>
+  <nav
+    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+  >
+    {
+      navItems.map((link) => (
+        <a
+        class={`relative block px-2 py-2 transition hover:text-amarillo dark:hover:text-amarillo ${link.color ? 'text-amarillo' : 'text-white'}`}
+          aria-label={link.label}
+          href={link.url}
+          target={link.target ?? '_self'}
+
+        >
+          {link.title}
+        </a>
+      ))
+    }
+
+  </nav>
+</header>
+
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10 ;
+    }
+  }
+</style>

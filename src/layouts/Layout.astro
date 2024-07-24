@@ -1,0 +1,62 @@
+---
+import "@fontsource-variable/onest"
+
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import { ViewTransitions } from "astro:transitions"
+
+interface Props {
+  title: string
+  description: string
+}
+
+const { description, title } = Astro.props
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+
+  <body class="relative bg-backGround">
+    <Header />
+    <slot />
+	<Footer />
+    <style is:global>
+      :root {
+        color-scheme: light dark;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: "Onest Variable", system-ui, sans-serif;
+        scroll-behavior: smooth;
+		width: 100vw; 
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        color: rgba(17, 17, 17, 0.9);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100%;
+        margin: 0; 
+        padding: 0; 
+        overscroll-behavior: none;
+        overflow-x: hidden;
+      }
+
+    </style>
+  </body>
+</html>
